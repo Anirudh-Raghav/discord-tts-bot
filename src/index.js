@@ -39,7 +39,7 @@ client.once('disconnect', () => {
 });
 
 client.on('message', (message) => {
-    const prefixes = JSON.parse(fs.readFileSync('../serverSettings.json', 'utf8'));
+    const prefixes = JSON.parse(fs.readFileSync('./serverSettings.json', 'utf8'));
 
     if (!prefixes[message.guild.id])
         prefixes[message.guild.id] = { prefix: '%' }

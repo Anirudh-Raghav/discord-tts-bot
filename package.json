@@ -13,14 +13,10 @@
   "author": "ani",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/opus": "^0.3.3",
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
     "ffmpeg-static": "^4.3.0",
     "google-tts-api": "^2.0.2",
     "opusscript": "0.0.8"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
   }
 }

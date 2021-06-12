@@ -3,6 +3,7 @@ module.exports = {
     descripton: 'Stop the TTS and leave the channel',
     aliases: ['dc', 'disconnect'],
     emoji: '🙊',
+    guildOnly: true,
     execute(message) {
         const { Player, voice } = message.guild;
         const connection = voice ? voice.connection : null;

@@ -2,6 +2,7 @@ module.exports = {
     name: 'speed',
     description: 'change talking speeds between **normal** and **slow**',
     emoji: '↔',
+    guildOnly: true,
     execute(message, args, prefix) {
         const speed = args[0];
         const { Player } = message.guild;

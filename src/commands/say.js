@@ -5,6 +5,7 @@ module.exports = {
     description: 'Sends a TTS message in the voice chaneel',
     emoji: '🗣',
     aliases: ['read'],
+    guildOnly: true,
     execute(message, args) {
         const { Player, voice } = message.guild;
         const voiceChannel = message.member.voice.channel;

@@ -5,6 +5,7 @@ module.exports = {
     description: 'Shows all the languages available',
     emoji: '🗣',
     aliases: ['showLangs'],
+    guildOnly: true,
     execute(message, args, prefix) {
         const langEmbed = new MessageEmbed()
             .setTitle('Language options')

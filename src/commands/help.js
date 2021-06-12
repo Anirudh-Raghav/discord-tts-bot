@@ -5,7 +5,7 @@ module.exports = {
     description: 'List all of my commands or info about a specific command',
     aliases: ['commands'],
     usage: '[command name]',
-
+    guildOnly: true,
     execute(message, args, prefix) {
         const HelpEmbed = new MessageEmbed()
             .setTitle('Command List')

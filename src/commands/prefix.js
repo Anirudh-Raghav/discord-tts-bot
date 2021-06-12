@@ -5,6 +5,7 @@ module.exports = {
     name: 'prefix',
     description: 'Sends a TTS message in the voice chaneel',
     emoji: '🗣',
+    guildOnly: true,
     execute(message, args) {
         if (!message.guild.members.cache.get(message.author.id).hasPermission('MANAGE_SERVER'))
             return message.reply('You don\'t have the permissions ... If you are so bored than play with yourself');

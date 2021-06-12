@@ -18,8 +18,7 @@ Structures.extend('Guild', Guild => {
 const client = new Discord.Client();
 
 client.commands = new Discord.Collection();
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-
+const commandFiles = fs.readdirSync('./src/commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
@@ -41,6 +40,7 @@ client.once('disconnect', () => {
 
 client.on('message', (message) => {
     const prefixes = JSON.parse(fs.readFileSync('../serverSettings.json', 'utf8'));
+
     if (!prefixes[message.guild.id])
         prefixes[message.guild.id] = { prefix: '%' }
     const prefix = prefixes[message.guild.id].prefix;

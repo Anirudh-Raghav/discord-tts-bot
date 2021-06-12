@@ -5,6 +5,7 @@ module.exports = {
     name: 'lang',
     description: 'Change the medium language for the TTS',
     emoji: '🔡',
+    guildOnly: true,
     execute(message, args, prefix) {
         let [lang] = args;
         const { Player } = message.guild;
